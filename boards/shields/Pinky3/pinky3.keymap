@@ -3,6 +3,12 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/bt.h>
 
+
+&soft_off {
+	hold-time-ms = <5000>; // Only turn off if the key is held for more than 5 seconds;
+};
+    
+
 / {
 	behaviors {
 		td0: tap_dance_0 {
@@ -13,10 +19,6 @@
 		};
 	};
 
-	&soft_off {
-		hold-time-ms = <5000>; // Only turn off if the key is held for more than 5 seconds;
-	};
-    
 	keymap {
         compatible = "zmk,keymap";
 
