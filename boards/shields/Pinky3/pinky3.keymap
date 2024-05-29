@@ -12,6 +12,10 @@
 			bindings = <&kp RALT>, <&kp LANG_HANJA>;
 		};
 	};
+
+	&soft_off {
+		hold-time-ms = <5000>; // Only turn off if the key is held for more than 5 seconds;
+	};
     
 	keymap {
         compatible = "zmk,keymap";
@@ -54,7 +58,7 @@
 //                               | OPTION  |   CTL   |   CMD   | RETURN  |          |  MO(1)  |  SPACE  |  MO(3)  |TD(RALT,han)|
             bindings = <
     &kp ESC         &kp F1     &kp F2        &kp F3        &kp F4       &kp F5       &trans              &trans    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &trans
-    &kp TAB         &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_BLE &out OUT_USB &out OUT_TOG              &trans    &none     &none     &none     &none     &none    &none
+    &kp TAB         &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_BLE &out OUT_USB &out OUT_TOG        &trans    &none     &none     &none     &none     &none    &none
     &mt LSHIFT LPAR &kp C_PP   &kp C_PREV    &kp C_NEXT    &none        &none        &mo 2               &none     &none     &none     &none     &none     &none    &mt RSHIFT RPAR
                                              &kp LALT      &kp LCTL     &kp LGUI     &kp RET             &mo 1     &kp SPACE &mo 3     &td0
             >;
@@ -68,7 +72,7 @@
 // |   LS(   |         |         |         |         |         |  MO(2)  |          |         |         |         |         |         |         |   RS)   |
 //                               | OPTION  |   CTL   |   CMD   | RETURN  |          |  MO(1)  |  SPACE  |  MO(3)  |TD(RALT,han)|
             bindings = <
-    &kp ESC         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR          &trans    &none     &none     &none     &kp LBKT  &kp RBKT &kp BSLH
+    &kp ESC         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR          &soft_off    &none     &none     &none     &kp LBKT  &kp RBKT &kp BSLH
     &kp TAB         &none        &none        &none        &none        &none        &none               &trans    &none     &none     &none     &none     &none    &kp DEL
     &mt LSHIFT LPAR &none        &none        &none        &none        &none        &mo 2               &none     &none     &none     &none     &none     &none    &mt RSHIFT RPAR
                                               &kp LALT     &kp LCTL     &kp LGUI     &kp RET             &mo 1     &kp SPACE &mo 3     &td0
