@@ -59,7 +59,7 @@
 // |   LS(   |   PP    |  PREV   |  NEXT   |         |         |  MO(2)  |          |         |         |         |         |         |         |   RS)   |
 //                               | OPTION  |   CTL   |   CMD   | RETURN  |          |  MO(1)  |  SPACE  |  MO(3)  |TD(RALT,han)|
             bindings = <
-    &kp ESC         &kp F1     &kp F2        &kp F3        &kp F4       &kp F5       &trans              &trans    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &trans
+    &kp ESC         &kp F1     &kp F2        &kp F3        &kp F4       &kp F5       &soft_off           &trans    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &trans
     &kp TAB         &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_BLE &out OUT_USB &out OUT_TOG        &trans    &none     &none     &none     &none     &none    &none
     &mt LSHIFT LPAR &kp C_PP   &kp C_PREV    &kp C_NEXT    &none        &none        &mo 2               &none     &none     &none     &none     &none     &none    &mt RSHIFT RPAR
                                              &kp LALT      &kp LCTL     &kp LGUI     &kp RET             &mo 1     &kp SPACE &mo 3     &td0
