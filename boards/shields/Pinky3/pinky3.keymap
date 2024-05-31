@@ -74,7 +74,7 @@
 // |   LS(   |         |         |         |         |         |  MO(2)  |          |         |         |         |         |         |         |   RS)   |
 //                               | OPTION  |   CTL   |   CMD   | RETURN  |          |  MO(1)  |  SPACE  |  MO(3)  |TD(RALT,han)|
             bindings = <
-    &kp ESC         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR          &soft_off    &none     &none     &none     &kp LBKT  &kp RBKT &kp BSLH
+    &kp GRAVE       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR          &soft_off    &none     &none     &none     &kp LBKT  &kp RBKT &kp BSLH
     &kp TAB         &none        &none        &none        &none        &none        &none               &trans    &none     &none     &none     &none     &none    &kp DEL
     &mt LSHIFT LPAR &none        &none        &none        &none        &none        &mo 2               &none     &none     &none     &none     &none     &none    &mt RSHIFT RPAR
                                               &kp LALT     &kp LCTL     &kp LGUI     &kp RET             &mo 1     &kp SPACE &mo 3     &td0
